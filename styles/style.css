@@ -1,0 +1,1961 @@
+@font-face {
+  font-family: 'coca';
+  src: url('../fonts/coca_cola_ii-webfont.woff') format('woff2'),
+       url('../fonts/coca_cola_ii-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+/*************/
+/* CSS RESET */
+/*************/
+
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+body {
+  margin:0;
+  position: relative;
+}
+
+button {
+  cursor:pointer;
+}
+
+li > button {
+  cursor: url("../images/opener.png") 55 15, auto;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+  --cocalogo:#fe001a;
+  --borders:black;
+  --logoshadow: 0.2em 0.2em 0.2em black;
+  --article1950: linear-gradient(180deg,#924331, #924331, #5C4033);
+  --boxshadowarticle1: 0.5em 0.5em 0.5em black;
+  --backgroundscherm1950: grey;
+  --boxshadowscherm1:inset -.1em -.1em .5em black;
+  --backgroundbeldbuis1950: lightgrey;
+  --boxshadowbeldbuis1:inset .25em .25em .5em black;
+  --backgroundluidspreker1950:#5C4033;
+  --boxshadowluidspreker1:inset -.1em -.1em .5em black;
+  --black:black;
+  --border1960: beige;
+  --shadow1960: -0.5em -0.5em 0.5em black;
+  --scherm1960: bisque;
+  --shadow1960:inset -.1em -.1em .5em black;
+  --beeldbuis1960:lightgray;
+  --shadowbeeldbuis1960: inset .25em .25em .5em black;
+  --borderschalter3:bisque;
+  --backgroundarticle1970: linear-gradient(180deg, hsl(30, 67%, 35%), hsl(30, 67%, 35%), #5C4033);
+  --shadow1970: 0.5em 0.5em 0.5em black;
+  --shadowscherm1970:inset -.1em -.1em .5em black;
+  --shadowbeeldbuis1970:inset .25em .25em .5em black;
+  --luidspreker1970: silver;
+  --schalter5:grey;
+  --background1980:#4e8b92; 
+  --background1990:#393433;
+  --background2010: #4f3455;
+  --h2shadow: 0.1em 0.1em 0.2em black;
+  --dialogbackground: white;
+  --h2color: beige;
+}
+
+@media (prefers-color-scheme:light) {
+  :root {
+  --cocalogo: #a20212; 
+  --h2color: white;
+  }
+}
+
+
+
+
+
+
+
+
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+
+h1 {
+  color: var(--cocalogo);
+  text-shadow: var(--logoshadow);
+  font-family: 'coca';
+  font-size: 800%;
+  position: absolute;
+  left:0.3em;
+  z-index: 50;
+}
+
+.header {
+  color: var(--h2color);
+  text-shadow: var(--logoshadow);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 150%;
+  font-weight: lighter;
+  position: absolute;
+  left:1.5em;
+  top:7em;
+  z-index: 50;
+}
+
+
+
+
+
+
+
+
+
+
+/********************/
+/* DE TIJDLIJN */
+/********************/
+
+ol {
+  position: fixed;
+  inset:0;
+
+  margin:0;
+  padding:0;
+  list-style: none;
+
+  display:flex;
+  overflow: scroll;
+
+  scroll-snap-type: x mandatory;
+}
+
+ol li {
+  position: relative;
+  width:100%;
+  height:100%;
+  flex-shrink: 0;
+
+  scroll-snap-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/********************/
+/* 1950 */
+/********************/
+li {
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.cal1950 {
+  width: 7%;
+  position: absolute;
+  left:90%;
+  top:82%;
+}
+
+.TV1950 {
+  position:absolute;
+  left: 68%;
+  top:17.5%;
+  box-sizing: border-box;
+  width: 18%;
+  height: 45%;
+  background:var(--article1950);
+  
+  padding: 1em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: var(--borders);
+  border-radius: 8%;
+  box-shadow: var(--boxshadowarticle1);
+}
+
+.TV1950 {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: none;
+  }
+  100%{
+    filter: 
+    drop-shadow(0.01em 0.01em 0.4em var(--borderschalter3))
+    drop-shadow(-0.01em -0.01em 0.4em var(--borderschalter3));
+  }
+}
+
+.scherm1950 {
+  position:absolute;
+  left: 20%;
+  top: 11%;
+  box-sizing: border-box;
+  width: 60%;
+  aspect-ratio:6/5;
+  background-color: var(--backgroundscherm1950);
+  box-shadow: var(--boxshadowscherm1);
+  padding: 4%;
+
+  border-style: solid;
+  border-width: .1em;
+  border-color: var(--borders);
+}
+
+.beeldbuis1950 {
+  height:100%;
+  background-color: var(--backgroundbeldbuis1950);
+  border-radius: 8%;
+  box-shadow: var(--boxshadowbeldbuis1);
+}
+
+#video1950 {
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-color: var(--backgroundbeldbuis1950);
+  z-index: 100;
+
+  cursor:url("../images/afstandsbediening.png") 20 5, auto;
+}
+
+.luidspreker1950 {
+  background-image: url(../images/luidspreker.png);
+  position:absolute;
+  left: 22%;
+  top:99%;
+  box-sizing: border-box;
+  width:60%;
+  height:70%;
+  background-color:var(--backgroundluidspreker1950);
+  opacity: 0.5;
+  box-shadow: var(--boxshadowluidspreker1);
+
+  border-style: solid;
+  border-width: .2em;
+  border-color: var(--borders);
+}
+
+.schalter1 {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 10%;
+  border-color: var(--borders);
+  border-radius: 40%;
+  height: 10%;
+  width: 10%;
+  background-color: var(--black);
+  position:absolute;
+  left: 6%;
+  top: 25%;
+}
+
+.schalter2 {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 10%;
+  border-color: var(--borders);
+  border-radius: 40%;
+  box-sizing: border-box;
+  height: 10%;
+  width: 10%;
+  background-color: var(--black);
+  position: absolute;
+  left:84%;
+  top: 25%;
+}
+
+li:nth-of-type(1) > button {
+  position: absolute;
+  left:66%;
+  top:73%;
+  width: 4%;
+
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+
+li:nth-of-type(1) > button img {
+  width: 100%;
+}
+
+@keyframes colafles1950 {
+  0% {
+    transform:rotate(0deg);
+  } 
+  
+  50% {
+    transform:rotate(2deg);
+    
+  }
+  100% {
+    transform:rotate(-2deg);
+  }
+}
+
+li:nth-of-type(1) > button:nth-of-type(1) {
+  animation-name:colafles1950;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+li:nth-of-type(1) > dialog {
+	width:30%;
+	max-width:50em;
+	padding:2em;
+  background-color: var(--dialogbackground);
+  border-radius: 4%;
+}
+
+li:nth-of-type(1) > dialog h2 {
+  font-family: 'coca';
+  font-size: 280%;
+  text-shadow: var(--h2shadow);
+  color: var(--cocalogo);
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li:nth-of-type(1) > dialog p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 88%;
+  margin-bottom: 0em;
+}
+
+li:nth-of-type(1) > dialog button {
+	font-size:1em;
+  position: absolute;
+  left:85%;
+  top:3%;
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes lid {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+li:nth-of-type(1) > dialog button:hover {
+  animation-name: lid;
+  animation-duration: 0.5sec;
+}
+
+
+
+
+
+
+
+
+
+/********************/
+/* 1960 */
+/********************/
+li:nth-of-type(2){
+  background-image: url(../images/background1960.png);
+}
+
+.cal1960 {
+  width: 7%;
+  position: absolute;
+  left:90%;
+  top:82%;
+}
+
+.TV1960 {
+  position:absolute;
+  left: 37.5%;
+  top:24.5%;
+  box-sizing: border-box;
+  width: 38%;
+  height: 33%;
+  background:var(--black);
+  
+  padding: 1em;
+  border-style: solid;
+  border-width: 1em;
+  border-color: var(--border1960);
+  border-radius: 4%;
+  box-shadow: var(--shadow1960);
+}
+
+.TV1960 {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: none;
+  }
+  100%{
+    filter: 
+    drop-shadow(0.01em 0.01em 0.4em var(--borderschalter3))
+    drop-shadow(-0.01em -0.01em 0.4em var(--borderschalter3));
+  }
+}
+
+.scherm1960 {
+  position:absolute;
+  left: 20%;
+  top: 1%;
+  box-sizing: border-box;
+  width: 61%;
+  aspect-ratio: 6/4.5;
+  background-color: var(--scherm1960);
+  box-shadow: var(--shadow1960);
+  padding: 4%;
+
+  border-style: solid;
+  border-width: .1em;
+  border-color:var(--borders);
+}
+
+.beeldbuis1960 {
+  height:100%;
+  background-color: var(--beeldbuis1960);
+  border-radius: 30%;
+  overflow:hidden;
+  box-shadow:var(--shadowbeeldbuis1960);
+}
+
+#video1960 {
+  position: relative;
+  width: 110%;
+  height:110%;
+  object-fit: cover;
+  object-position: center;
+  background-color: var(black);
+  border-radius: 30%;
+  
+  cursor:url("../images/afstandsbediening.png") 20 5, auto;
+}
+
+.schalter3 {  
+  box-sizing: border-box;
+  background-color: var(--black);
+  border-style: solid;
+  border-width: 0.5em;
+  border-color:var(--borderschalter3);
+  border-radius: 60%;
+  height: 20%;
+  width: 10%;
+  background-color: var(black);
+  position: absolute;
+  left: 6%;
+  top: 25%;
+} 
+
+.schalter4 {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0.5em;
+  border-color: var(--borderschalter3);
+  border-radius: 60%;
+  box-sizing: border-box;
+  height: 20%;
+  width: 10%;
+  background-color: var(--black);
+  position: absolute;
+  left:84%;
+  top: 25%;
+  z-index: 100;
+} 
+
+li:nth-of-type(2) > button {
+  position: absolute;
+  left:77%;
+  top:35.5%;
+  width: 3.5%;
+
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+
+li:nth-of-type(2) > button img {
+  width: 100%;
+}
+
+@keyframes colafles1960 {
+  0% {
+    transform:rotate(0deg);
+  } 
+  
+  50% {
+    transform:rotate(2deg);
+    
+  }
+  100% {
+    transform:rotate(-2deg);
+  }
+}
+
+li:nth-of-type(2) > button {
+  animation-name:colafles1960;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+li:nth-of-type(2) > dialog {
+  position: absolute;
+  top: 20%;
+  left: -63%;
+	width:30%;
+  padding:2em;
+	max-width:50em;
+  background-color: var(--dialogbackground);
+  border-radius: 4%;
+}
+ 
+li:nth-of-type(2) > dialog h2 {
+  font-family: 'coca';
+  font-size: 280%;
+  text-shadow: var(--h2shadow);
+  color: var(--cocalogo);
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li:nth-of-type(2) > dialog p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 88%;
+  margin-bottom: 0em;
+}
+
+li:nth-of-type(2) > dialog button {
+	font-size:1em;
+  position: absolute;
+  left:85%;
+  top:3%;
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes lid {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+dialog button:hover {
+  animation-name: lid;
+  animation-duration: 0.5s;
+}
+
+/* 1970 */
+
+li:nth-of-type(3){
+  background-image: url(../images/background1970.png);
+}
+
+.cal1970 {
+  width: 7%;
+  position: absolute;
+  left:90%;
+  top:82%;
+}
+
+.TV1970 {
+  position:absolute;
+  left: 63%;
+  top:30%;
+  box-sizing: border-box;
+  width: 27%;
+  height: 34%;
+  background: var(--backgroundarticle1970);
+  
+  padding: 1em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: var(--borders);
+  box-shadow: var(--shadow1970);
+}
+
+.TV1970 {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: none;
+  }
+  100%{
+    filter: 
+    drop-shadow(0.01em 0.01em 0.4em var(--borderschalter3))
+    drop-shadow(-0.01em -0.01em 0.4em var(--borderschalter3));
+  }
+}
+
+.scherm1970 {
+  position:absolute;
+  left: 3%;
+  top: 9%;
+  box-sizing: border-box;
+  width: 77%;
+  aspect-ratio:6/4.5;
+  background-color: var(--black);
+  box-shadow: var(--shadowscherm1970);
+  padding: 2%;
+
+  border-style: solid;
+  border-width: .1em;
+  border-color:var(--borders);
+  border-radius: 15%;
+}
+
+.beeldbuis1970 {
+  height:100%;
+  background-color: var(black);
+  border-radius: 5%;
+  box-shadow: var(--shadowbeeldbuis1970);
+}
+
+#video1970 {
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-color: black;
+  border-radius: 30%;
+
+  cursor:url("../images/afstandsbediening.png") 20 5, auto;
+}
+
+.luidspreker1970 {
+  position:absolute;
+  left: 103%;
+  top:17%;
+  box-sizing: border-box;
+  width:20%;
+  height:70%;
+  background-color: var(--luidspreker1970);
+  box-shadow: var(--shadowbeeldbuis1970);
+
+  border-style: solid;
+  border-width: .2em;
+  border-color: var(--borders);
+}
+
+.schalter5 { 
+  box-sizing: border-box; 
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: var(--borders);
+  border-radius: 100%;
+  height: 10%;
+  width: 9%;
+  background-color: var(--schalter5);
+  position:absolute;
+  left: 84%;
+  top: 50%;
+  z-index: 100;
+} 
+
+.schalter6 {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: var(--borders);
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 10%;
+  width: 9%;
+  background-color: var(--schalter5);
+  position: absolute;
+  left:84%;
+  top: 30%;
+  z-index: 100;
+} 
+
+.colafles1970 img {
+  position: absolute;
+  left:-145%;
+  top:39%;
+  width: 15%;
+}
+
+li:nth-of-type(3) > button {
+  position: absolute;
+  left:40%;
+  top:45%;
+  width: 3%;
+
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+
+li:nth-of-type(3) > button img {
+  width: 100%;
+}
+
+@keyframes colafles1970 {
+  0% {
+    transform:rotate(0deg);
+  } 
+  
+  50% {
+    transform:rotate(2deg);
+    
+  }
+  100% {
+    transform:rotate(-2deg);
+  }
+}
+
+li:nth-of-type(3) > button {
+  animation-name:colafles1970;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+li:nth-of-type(3) > dialog {
+  position: absolute;
+  top:15%;
+  left:-40%;
+	width:50%;
+	max-width:40em;
+  max-height: 300em;
+	padding:2em;
+  background: rgb(232,222,209);
+  background: linear-gradient(360deg, rgba(232,222,209,1) 0%, rgba(251,246,239,1) 100%);
+  border-radius: 4%;
+}
+
+li:nth-of-type(3) > dialog h2 {
+  font-family: 'coca';
+  font-size: 280%;
+  text-shadow: var(--h2shadow);
+  color: var(--cocalogo);
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li:nth-of-type(3) > dialog p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 88%;
+  margin-bottom: 1.5em;
+}
+
+li:nth-of-type(3) > dialog button {
+	font-size:1em;
+  position: absolute;
+  left:85%;
+  top:3%;
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes lid {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+li:nth-of-type(3) > dialog button:hover {
+  animation-name: lid;
+  animation-duration: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+/********************/
+/* 1980 */
+/********************/
+
+li:nth-of-type(4){
+  background-image: url(../images/background1980.png);
+}
+
+.cal1980 {
+  width: 7%;
+  position: absolute;
+  left:90%;
+  top:82%;
+}
+
+.TV1980 {
+  position:absolute;
+  left: 57%;
+  top:27%;
+  box-sizing: border-box;
+  width: 26%;
+  height: 35%;
+  background: var(--background1980);
+  
+  padding: 1em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: var(--borders);
+  box-shadow: var(--shadow1960), var(--boxshadowarticle1);
+}
+
+.TV1980 {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: none;
+  }
+  100%{
+    filter: 
+    drop-shadow(0.01em 0.01em 0.4em var(--borderschalter3))
+    drop-shadow(-0.01em -0.01em 0.4em var(--borderschalter3));
+  }
+}
+
+.scherm1980 {
+  position:absolute;
+  left: 5%;
+  top: 5%;
+  box-sizing: border-box;
+  height:80%;
+  width: 90%;
+  aspect-ratio:6/4.5;
+  background-color: var(--black);
+  box-shadow: var(--shadowscherm1970);
+  padding: 2%;
+
+  border-style: solid;
+  border-width: .1em;
+  border-color:var(--borders);
+}
+
+.beeldbuis1980 {
+  height:100%;
+  background-color: var(black);
+  box-shadow: var(--shadowbeeldbuis1970);
+}
+
+#video1980 {
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-color: black;
+
+  cursor:url("../images/afstandsbediening.png") 20 5, auto;
+}
+
+.luidspreker1980 {
+  position:absolute;
+  left: 0%;
+  top:105%;
+  box-sizing: border-box;
+  width:80%;
+  height:7%;
+  background-color: var(--luidspreker1970);
+  box-shadow: var(--shadowbeeldbuis1970);
+
+  border-style: solid;
+  border-width: .2em;
+  border-color: var(--borders);
+}
+
+.schalter7 { 
+  box-sizing: border-box; 
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: var(--borders);
+  border-radius: 100%;
+  height: 5%;
+  width: 5%;
+  background-color: var(--schalter5);
+  position:absolute;
+  left: 79%;
+  top: 89%;
+  z-index: 100;
+} 
+
+.schalter8 {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: var(--borders);
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 5%;
+  width: 5%;
+  background-color: var(--schalter5);
+  position: absolute;
+  left:89%;
+  top: 89%;
+  z-index: 100;
+} 
+
+.colaglas1 img {
+  position: absolute;
+  left:50%;
+  top:70%;
+  width: 4%;
+}
+
+.colaglas2 img {
+  position: absolute;
+  left:35%;
+  top:76%;
+  width: 4%;
+}
+
+li:nth-of-type(4) > button {
+  position: absolute;
+  left:42%;
+  top:65%;
+  width: 4%;
+
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+
+li:nth-of-type(4) > button img {
+  width: 100%;
+}
+
+@keyframes colafles1980 {
+  0% {
+    transform:rotate(0deg);
+  } 
+  
+  50% {
+    transform:rotate(2deg);
+    
+  }
+  100% {
+    transform:rotate(-2deg);
+  }
+}
+
+li:nth-of-type(4) > button {
+  animation-name:colafles1980;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+
+li:nth-of-type(4) > dialog {
+  position: absolute;
+  left:-50%;
+  top:20%;
+	width:30%;
+	max-width:50em;
+	padding:2em;
+  background-color: var(--dialogbackground);
+  border-radius: 5%;
+}
+
+li:nth-of-type(4) > dialog h2 {
+  font-family: 'coca';
+  font-size: 280%;
+  text-shadow: var(--h2shadow);
+  color: var(--cocalogo);
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li:nth-of-type(4) > dialog p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 88%;
+  margin-bottom: 0em;
+}
+
+li:nth-of-type(4) > dialog button {
+	font-size:1em;
+  position: absolute;
+  left:85%;
+  top:3%;
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes lid {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+li:nth-of-type(4) > dialog button:hover {
+  animation-name: lid;
+  animation-duration: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+/********************/
+/* 1990 */
+/********************/
+
+li:nth-of-type(5){
+  background-image: url(../images/backhround1990.png);
+}
+
+.cal1990 {
+  width: 7%;
+  position: absolute;
+  left:90%;
+  top:82%;
+}
+
+.TV1990 {
+  position:absolute;
+  left: 49%;
+  top:19%;
+  box-sizing: border-box;
+  width: 24%;
+  height: 33%;
+  background: var(--background1990);
+  
+  padding: 1em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: var(--borders);
+  box-shadow: var(--shadow1960), var(--boxshadowarticle1);
+}
+
+.TV1990 {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: none;
+  }
+  100%{
+    filter: 
+    drop-shadow(0.01em 0.01em 0.4em var(--borderschalter3))
+    drop-shadow(-0.01em -0.01em 0.4em var(--borderschalter3));
+  }
+}
+
+.scherm1990 {
+  position:absolute;
+  left: 5%;
+  top: 5%;
+  box-sizing: border-box;
+  height:80%;
+  width: 90%;
+  aspect-ratio:6/4.5;
+  background-color: var(--black);
+  box-shadow: var(--shadowscherm1970);
+  padding: 2%;
+
+  border-style: solid;
+  border-width: .1em;
+  border-color:var(--borders);
+}
+
+.beeldbuis1990 {
+  height:100%;
+  background-color: var(black);
+  box-shadow: var(--shadowbeeldbuis1970);
+}
+
+#video1990 {
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-color: black;
+
+  cursor:url("../images/afstandsbediening.png") 20 5, auto;
+}
+
+.luidspreker1990 {
+  position:absolute;
+  left: 0%;
+  top:105%;
+  box-sizing: border-box;
+  width:80%;
+  height:7%;
+  background-color: var(--luidspreker1970);
+  box-shadow: var(--shadowbeeldbuis1970);
+
+  border-style: solid;
+  border-width: .2em;
+  border-color: var(--borders);
+}
+
+.schalter9 { 
+  box-sizing: border-box; 
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: var(--borders);
+  border-radius: 100%;
+  height: 5%;
+  width: 5%;
+  background-color: var(--schalter5);
+  position:absolute;
+  left: 79%;
+  top: 89%;
+  z-index: 100;
+} 
+
+.schalter10 {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: var(--borders);
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 5%;
+  width: 5%;
+  background-color: var(--schalter5);
+  position: absolute;
+  left:89%;
+  top: 89%;
+  z-index: 100;
+} 
+
+li:nth-of-type(5) > button {
+  position: absolute;
+  left:70%;
+  top:58%;
+  width: 7%;
+
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+
+li:nth-of-type(5) > button img {
+  width: 100%;
+}
+
+@keyframes colafles1990 {
+  0% {
+    transform:rotate(0deg);
+  } 
+  
+  50% {
+    transform:rotate(2deg);
+    
+  }
+  100% {
+    transform:rotate(-2deg);
+  }
+}
+
+li:nth-of-type(5) > button {
+  animation-name:colafles1990;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+li:nth-of-type(5) > dialog {
+  position: absolute;
+  left:-50%;
+  top:20%;
+	width:30%;
+	max-width:50em;
+	padding:2em;
+  background-color: var(--dialogbackground);
+  border-radius: 5%;
+}
+
+li:nth-of-type(5) > dialog h2 {
+  font-family: 'coca';
+  font-size: 280%;
+  text-shadow: var(--h2shadow);
+  color: var(--cocalogo);
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li:nth-of-type(5) > dialog p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 88%;
+  margin-bottom: 0em;
+}
+
+li:nth-of-type(5) > dialog button {
+	font-size:1em;
+  position: absolute;
+  left:85%;
+  top:3%;
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes lid {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+li:nth-of-type(5) > dialog button:hover {
+  animation-name: lid;
+  animation-duration: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+/********************/
+/* 2000 */
+/********************/
+
+li:nth-of-type(6){
+  background-image: url(../images/background2000.png);
+}
+
+.cal2000 {
+  width: 7%;
+  position: absolute;
+  left:90%;
+  top:82%;
+}
+
+.TV2000 {
+  position:absolute;
+  left: 37.5%;
+  top:24%;
+  box-sizing: border-box;
+  width: 31.5%;
+  height: 31%;
+  background: var(--background2010);
+  
+  padding: 0.5em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: var(--borders);
+  box-shadow: var(--shadow1960), var(--boxshadowarticle1);
+}
+
+.TV2000 {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: none;
+  }
+  100%{
+    filter: 
+    drop-shadow(0.01em 0.01em 0.4em var(--borderschalter3))
+    drop-shadow(-0.01em -0.01em 0.4em var(--borderschalter3));
+  }
+}
+
+.scherm2000 {
+  position:absolute;
+  left: 5%;
+  top: 5%;
+  box-sizing: border-box;
+  height:90%;
+  width: 90%;
+  aspect-ratio: 6/4;
+  background-color: var(--black);
+  box-shadow: var(--shadowscherm1970);
+  padding: 2%;
+
+  border-style: solid;
+  border-width: .1em;
+  border-color:var(--borders);
+}
+
+.beeldbuis2000 {
+  height:100%;
+  background-color: var(black);
+  box-shadow: var(--shadowbeeldbuis1970);
+}
+
+#video2000 {
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-color: black;
+
+  cursor:url("../images/afstandsbediening.png") 20 5, auto;
+}
+
+.luidspreker2000 {
+  position:absolute;
+  left: 31.5%;
+  top:108%;
+  box-sizing: border-box;
+  width:40%;
+  height:7%;
+  background-color: var(--luidspreker1970);
+  box-shadow: var(--shadowbeeldbuis1970);
+
+  border-style: solid;
+  border-width: .2em;
+  border-color: var(--borders);
+}
+
+.schalter11 { 
+  box-sizing: border-box; 
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: var(--borders);
+  border-radius: 100%;
+  height: 5%;
+  width: 5%;
+  background-color: var(--schalter5);
+  position:absolute;
+  left: 79%;
+  top: 95%;
+  z-index: 100;
+} 
+
+.schalter12 {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: var(--borders);
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 5%;
+  width: 5%;
+  background-color: var(--schalter5);
+  position: absolute;
+  left:89%;
+  top: 95%;
+  z-index: 100;
+} 
+
+
+li:nth-of-type(6) > button {
+  position: absolute;
+  left:21%;
+  top:70%;
+  width: 3%;
+
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+
+li:nth-of-type(6) > button img {
+  width: 100%;
+  filter: drop-shadow(black);
+}
+
+@keyframes colafles2000 {
+  0% {
+    transform:rotate(0deg);
+  } 
+  
+  50% {
+    transform:rotate(2deg);
+    
+  }
+  100% {
+    transform:rotate(-2deg);
+  }
+}
+
+li:nth-of-type(6) > button {
+  animation-name:colafles2000;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+li:nth-of-type(6) > dialog {
+  position: absolute;
+  top:20%;
+  left:-63%;
+	width:30%;
+	max-width:50em;
+	padding:2em;
+  background-color: var(--dialogbackground);
+  border-radius: 5%;
+}
+
+li:nth-of-type(6) > dialog h2 {
+  font-family: 'coca';
+  font-size: 280%;
+  text-shadow: var(--h2shadow);
+  color: var(--cocalogo);
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li:nth-of-type(6) > dialog p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 88%;
+  margin-bottom: 0em;
+}
+
+li:nth-of-type(6) > dialog button {
+	font-size:1em;
+  position: absolute;
+  left:85%;
+  top:3%;
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes lid {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+li:nth-of-type(6) > dialog button:hover {
+  animation-name: lid;
+  animation-duration: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+/********************/
+/* 2010 */
+/********************/
+
+li:nth-of-type(7){
+  background-image: url(../images/background2010.png);
+}
+
+.cal2010 {
+  width: 7%;
+  position: absolute;
+  left:90%;
+  top:82%;
+}
+
+.TV2010 {
+  position:absolute;
+  left: 60%;
+  top:8%;
+  box-sizing: border-box;
+  width: 35%;
+  height: 32%;
+  background: var(--background2010);
+  rotate:-1deg;
+  
+  padding: 0.5em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: var(--borders);
+  box-shadow: var(--shadow1960), var(--boxshadowarticle1);
+}
+
+.TV2010 {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: none;
+  }
+  100%{
+    filter: 
+    drop-shadow(0.01em 0.01em 0.4em var(--borderschalter3))
+    drop-shadow(-0.01em -0.01em 0.4em var(--borderschalter3));
+  }
+}
+
+.scherm2010 {
+  position:absolute;
+  left: 5%;
+  top: 5%;
+  box-sizing: border-box;
+  height:90%;
+  width: 90%;
+  aspect-ratio: 6/4;
+  background-color: var(--black);
+  box-shadow: var(--shadowscherm1970);
+
+  border-style: solid;
+  border-width: .1em;
+  border-color:var(--borders);
+}
+
+.beeldbuis2010 {
+  height:100%;
+  background-color: var(black);
+  box-shadow: var(--shadowbeeldbuis1970);
+}
+
+#video2010 {
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-color: black;
+
+  cursor:url("../images/afstandsbediening.png") 20 5, auto;
+}
+
+li:nth-of-type(7) > button {
+  position: absolute;
+  left:65%;
+  top:50%;
+  width: 3%;
+
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+
+li:nth-of-type(7) > button img {
+  width: 100%;
+  filter: drop-shadow(black);
+}
+
+@keyframes colafles2010 {
+  0% {
+    transform:rotate(0deg);
+  } 
+  
+  50% {
+    transform:rotate(2deg);
+    
+  }
+  100% {
+    transform:rotate(-2deg);
+  }
+}
+
+li:nth-of-type(7) > button {
+  animation-name:colafles2010;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+li:nth-of-type(7) > dialog {
+  position: absolute;
+  top:23%;
+  left:-30%;
+	width:35%;
+	max-width:55em;
+  max-height: 38em;
+	padding:2em;
+  background-color: var(--dialogbackground);
+  border-radius: 5%;
+}
+
+li:nth-of-type(7) > dialog h2 {
+  font-family: 'coca';
+  font-size: 280%;
+  text-shadow: var(--h2shadow);
+  color: var(--cocalogo);
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li:nth-of-type(7) > dialog p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 88%;
+  margin-bottom: 0em;
+}
+
+li:nth-of-type(7) > dialog button {
+	font-size:1em;
+  position: absolute;
+  left:85%;
+  top:3%;
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes lid {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+li:nth-of-type(7) > dialog button:hover {
+  animation-name: lid;
+  animation-duration: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+/********************/
+/* 2020 */
+/********************/
+
+li:nth-of-type(8){
+  background-image: url(../images/background2020.png);
+}
+
+.cal2020 {
+  width: 7%;
+  position: absolute;
+  left:90%;
+  top:82%;
+}
+
+.TV2020 {
+  position:absolute;
+  left: 55%;
+  top:8%;
+  box-sizing: border-box;
+  width: 35%;
+  height: 32%;
+  background: var(--background1990);
+  
+  padding: 0.1em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: var(--borders);
+  box-shadow: var(--shadow1960), var(--boxshadowarticle1);
+}
+
+.TV2020 {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: none;
+  }
+  100%{
+    filter: 
+    drop-shadow(0.01em 0.01em 0.4em var(--borderschalter3))
+    drop-shadow(-0.01em -0.01em 0.4em var(--borderschalter3));
+  }
+}
+.scherm2020 {
+  position:absolute;
+  left: 2%;
+  top: 2.5%;
+  box-sizing: border-box;
+  height:95%;
+  width: 96%;
+  aspect-ratio: 6/4;
+  background-color: var(--black);
+  box-shadow: var(--shadowscherm1970);
+
+  border-style: solid;
+  border-width: .1em;
+  border-color:var(--borders);
+}
+
+.beeldbuis2020 {
+  height:100%;
+  background-color: var(black);
+  box-shadow: var(--shadowbeeldbuis1970);
+}
+
+#video2020 {
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-color: black;
+
+  cursor:url("../images/afstandsbediening.png") 20 5, auto;
+}
+
+li:nth-of-type(8) > button {
+  position: absolute;
+  left:50%;
+  top:62%;
+  width: 3%;
+
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+
+li:nth-of-type(8) > button img {
+  width: 100%;
+  filter: drop-shadow(black);
+}
+
+@keyframes colafles2020 {
+  0% {
+    transform:rotate(0deg);
+  } 
+  
+  50% {
+    transform:rotate(2deg);
+    
+  }
+  100% {
+    transform:rotate(-2deg);
+  }
+}
+
+li:nth-of-type(8) > button {
+  animation-name:colafles2020;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+li:nth-of-type(8) > dialog {
+  position: absolute;
+  left:-50%;
+  top:20%;
+	width:40%;
+	max-width:55em;
+  max-height: 35em;
+	padding:2em;
+  background-color: var(--dialogbackground);
+  border-radius: 5%;
+}
+
+li:nth-of-type(8) > dialog h2 {
+  font-family: 'coca';
+  font-size: 280%;
+  text-shadow: var(--h2shadow);
+  color: var(--cocalogo);
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li:nth-of-type(8) > dialog p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 88%;
+  margin-bottom: 0em;
+}
+
+li:nth-of-type(8) > dialog button {
+	font-size:1em;
+  position: absolute;
+  left:85%;
+  top:3%;
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes lid {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+li:nth-of-type(8) > dialog button:hover {
+  animation-name: lid;
+  animation-duration: 0.5s;
+}
+
+li:nth-of-type(8) > button.groteBoem {
+  animation-name: groteBoem;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  animation-iteration-count: 1;
+}
+
+@keyframes groteBoem {
+  0% { 
+    scale: 1;
+  }
+
+  10% {
+    scale: 1.2;
+  }
+  
+  20% {
+    scale: .9;
+  }
+
+  30% {
+    scale: 1.5;
+  }
+
+  40% {
+    scale: .8;
+  }
+
+  50% {
+    scale: 2;
+  }
+
+  60% {
+    scale: 1;
+  }
+
+  80% {
+    scale: .9;
+    opacity:1;
+  }
+
+  85%,
+  100% {
+    scale: 80;
+    opacity:0;
+  }
+
+}
+
+
+
+aside {
+  position: fixed;
+  inset:0;
+  z-index: 100;
+
+  opacity: 0;
+  pointer-events:none;
+  transition: .5s;
+  background-color: white;
+  background-image: url(../images/chin.png);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+aside h2 {
+  color: var(--cocalogo);
+  text-shadow: var(--logoshadow);
+  font-family: 'coca';
+  font-size: 800%;
+  position: absolute;
+  left:4.5em;
+  top:1em;
+  z-index: 50;
+}
+
+aside.tadaa {
+  opacity: 1;
+}
