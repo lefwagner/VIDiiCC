@@ -41,9 +41,9 @@ Mijn startniveau is: blauw
   These are just a few of the many Coca-Cola bottle designs that have been produced since 1886, and the brand continues to innovate and create new designs to this day. </p>
 
   ### De eerste schetsen:
-  <img src="readme-images/schetsen1" width="375px" alt="eerste versie/schets1">
-  <img src="readme-images/schetsen2" width="375px" alt="eerste versie/schets2">
-  <img src="readme-images/schetsen3" width="375px" alt="eerste versie/schets3">
+  <img src="../readme-images/schetsen1" width="375px" alt="eerste versie/schets1">
+  <img src="../readme-images/schetsen2" width="375px" alt="eerste versie/schets2">
+  <img src="../readme-images/schetsen3" width="375px" alt="eerste versie/schets3">
 
 </details>
 
@@ -66,7 +66,7 @@ Mijn startniveau is: blauw
 
   #### oplossing:
 
-  <img src="readme-images/bevinding3" width="375px" alt="eerste versie/schets6">
+  <img src="../readme-images/bevinding3" width="375px" alt="eerste versie/schets6">
 
   To overcome this feeling I started to disect my idea into doable sections. As a background could be easily designed on Illustrator or downloaded from the internet, the most important aspect would be the TV for now. So I looked at what a TV from 1950 actually looked like and also disected this one into different forms and objects that I could create with CSS and place over each other. Seen here was my first stage for the TV. Of course it doesnt look that nice yet, but it was a first milestone that I actually created something with CSS. 
 
@@ -76,22 +76,22 @@ Mijn startniveau is: blauw
 
   #### oplossing:
 
-  <img src="readme-images/versie1" width="375px" alt="eerste versie/schets5">
+  <img src="../readme-images/versie1" width="375px" alt="eerste versie/schets5">
 
   To implement the vintage factor more into my concept, I decided to adjust the TV and background of the scenario for each year. Although this would mean much more work for me I thought it could give the whole concept more of a story and create a feeling of "going through time". Seen here is my first try on a TV from 1950 created with CSS. 
 
 ### Bevinding 4:
 
-  <img src="readme-images/bevinding4" width="375px" alt="eerste versie/schets7">
-  <img src="readme-images/bevinding4.1" width="375px" alt="eerste versie/schets8">
+  <img src="../readme-images/bevinding4" width="375px" alt="eerste versie/schets7">
+  <img src="../readme-images/bevinding4.1" width="375px" alt="eerste versie/schets8">
 
 
   When trying to give the TV a bit more of a realistic look by adding shadows and gradients, I also wanted to give the borders the same gradient as the background. I had used a source from the internet that told me to use border-image-source for the border-gradient, but it turned out into these weird dots around the corners. 
 
   #### oplossing:
 
-  <img src="readme-images/bevinding4.2" width="375px" alt="eerste versie/schets9">
-  <img src="readme-images/bevinding4.3" width="375px" alt="eerste versie/schets10">
+  <img src="../readme-images/bevinding4.2" width="375px" alt="eerste versie/schets9">
+  <img src="../readme-images/bevinding4.3" width="375px" alt="eerste versie/schets10">
 
 
   It turned out that because of my border radius the borders could not adapt the gradient by using border-image-source. So I decided to make the borders as small as possible, giving the impression that the whole background is filled with the gradient.
@@ -102,7 +102,7 @@ Mijn startniveau is: blauw
 
   #### oplossing:
 
-  <img src="readme-images/java1" width="375px" alt="eerste versie/java">
+  <img src="../readme-images/java1" width="375px" alt="eerste versie/java">
 
   Due to some form of restriction from the government it is not allowed to play a video without the user actively asking for it. Thats why I had to add a command with JavaScript that will make it possible to start and stop the video with a click. 
    
@@ -114,9 +114,9 @@ Mijn startniveau is: blauw
 
   ### De eerste versie:
 
-  <img src="readme-images/schetsen4" width="375px" alt="eerste versie/schets4">
+  <img src="../readme-images/schetsen4" width="375px" alt="eerste versie/schets4">
 
-  <img src="readme-images/versie2" width="375px" alt="eerste versie/schets5">
+  <img src="../readme-images/versie2" width="375px" alt="eerste versie/schets5">
 
 
 
@@ -141,7 +141,7 @@ Mijn startniveau is: blauw
 
   #### oplossing:
 
-  <img src="readme-images/bevinding6" width="375px" alt="eerste versie/schets12">
+  <img src="../readme-images/bevinding6" width="375px" alt="eerste versie/schets12">
 
   As I had put all my measurement for the objects and the positions of headers and the TV in "em", the website was not yeat responsive to a change in format. By changing all of the measurements into percentages, the layout stayed the same. Furthermore I fixated the part of the TV where the video was in, so that it would still be big enough to see something on it even when made smaller. 
 
@@ -152,7 +152,7 @@ Mijn startniveau is: blauw
 
   #### oplossing:
 
-  <img src="readme-images/bevinding5" width="375px" alt="eerste versie/schets11">
+  <img src="../readme-images/bevinding5" width="375px" alt="eerste versie/schets11">
 
   While the original template showed the option of a menu bar that makes it possible to click through the timeline, I decided to create a sliding timeline to create more storyline within the concept. 
   By creating a Organised List with different List items it was possible to adapt each year independently. 
@@ -172,22 +172,22 @@ Mijn startniveau is: blauw
 
   #### oplossing:
 
-  <img src="readme-images/custom" width="375px" alt="eerste versie/custom">
+  <img src="../readme-images/custom" width="375px" alt="eerste versie/custom">
 
   Although this took quite a while to create for all the different aspects, at the end it created a better overview over the colours I was using more often and the shadows I could easily be repeating. Also it made it easier to find a certain aspect in the whole code. 
 
   ### Bevinding 5:
 
-  <img src="readme-images/button" width="375px" alt="eerste versie/button">
-  <img src="readme-images/button2" width="375px" alt="eerste versie/button2">
-  <img src="readme-images/button4" width="375px" alt="eerste versie/button4">
+  <img src="../readme-images/button" width="375px" alt="eerste versie/button">
+  <img src="../readme-images/button2" width="375px" alt="eerste versie/button2">
+  <img src="../readme-images/button4" width="375px" alt="eerste versie/button4">
 
 
   Another big milestone was the implementation of my first button created out of a image. At first I had difficulties connecting them two as there was always a part of the button displayed in the left upper corner of the screen. 
 
   #### oplossing:
 
-  <img src="readme-images/button3" width="375px" alt="eerste versie/button3">
+  <img src="../readme-images/button3" width="375px" alt="eerste versie/button3">
 
   Luckily I finally realised (with some help) that the image needed to be depending on the button, not the other way around. By giving all the properties like size and position to the buttom and then adding the image at a 100% scale to these properties, the button and image could fully immerse. 
 
@@ -206,7 +206,7 @@ Mijn startniveau is: blauw
 
   #### oplossing:
 
-   <img src="readme-images/pointer.jpg" width="375px" alt="pointer">
+   <img src="../readme-images/pointer.jpg" width="375px" alt="pointer">
 
   So I decided to add details like adding different cursors. When you hover over the TV it turns into a remote control and with the bottle it becomes a bottle opener. Like this it is also more clearer that these parts are interactive and you can click on it. Like this the User Experience is also improved. 
 
@@ -217,23 +217,23 @@ Mijn startniveau is: blauw
 
   #### oplossing:
   
-  <img src="readme-images/dialoge.jpg" width="375px" alt="dialoge">
-  <img src="readme-images/dialoge2.jpg" width="375px" alt="dialoge2">
+  <img src="../readme-images/dialoge.jpg" width="375px" alt="dialoge">
+  <img src="../readme-images/dialoge2.jpg" width="375px" alt="dialoge2">
 
 
   Luckily all the excercices and explainations on dlo helped me understand the connection between html,css and javascript better. I was even able to add a sound to the clicking function that caused the opening of the dialoge frame. 
 
   ### Bevinding 3:
   
-  <img src="readme-images/audio" width="375px" alt="eerste versie/audio">
+  <img src="../readme-images/audio" width="375px" alt="eerste versie/audio">
 
   As already mentioned I wanted to add audio to the effect of clicking on the bottle, as if you are really opening a bottle. On the internet it said this could be easily done through CSS. Unfortunately it turned out to not working. The sound was playing randomely and not on the count of clicking the bottle.
 
   #### oplossing:
 
-  <img src="readme-images/audio1.jpg" width="375px" alt="audio1">
-  <img src="readme-images/audio2.jpg" width="375px" alt="audio2">
-  <img src="readme-images/dialoge2.jpg" width="375px" alt="dialoge2">
+  <img src="../readme-images/audio1.jpg" width="375px" alt="audio1">
+  <img src="../readme-images/audio2.jpg" width="375px" alt="audio2">
+  <img src="../readme-images/dialoge2.jpg" width="375px" alt="dialoge2">
 
   It took me quite a while to figure out that I could simply add the sound to the action on java script. By creating a extra class for the sound I could easily add it to the JavaScript code. The preload is used so that the sound will automatically be downloaded by the computer when opening the website, so there will be no delay in the playing of the sound. 
 
@@ -243,8 +243,8 @@ Mijn startniveau is: blauw
 
   #### oplossing:
 
-  <img src="readme-images/div.jpg" width="375px" alt="div">
-  <img src="readme-images/div2.jpg" width="375px" alt="div2">
+  <img src="../readme-images/div.jpg" width="375px" alt="div">
+  <img src="../readme-images/div2.jpg" width="375px" alt="div2">
 
   Through this I found out that I still had some mistakes in my HTML, that were not standing in the way of the website working, but just weren't that pretty. For example I still used the term div2 in some articles, from when I didn't know that you could simply add a class to differentiate between different div's. 
 
@@ -268,16 +268,16 @@ Mijn startniveau is: blauw
 
   ### Je uitkomst - karakteristiek screenshot(s):
 
-  <img src="readme-images/final.jpg" width="375px" alt="final">
-  <img src="readme-images/final2.jpg" width="375px" alt="final2">
-  <img src="readme-images/final3.jpg" width="375px" alt="final3">
-  <img src="readme-images/final4.jpg" width="375px" alt="final4">
-  <img src="readme-images/final5.jpg" width="375px" alt="final5">
-  <img src="readme-images/final6.jpg" width="375px" alt="final6">
-  <img src="readme-images/final7.jpg" width="375px" alt="final7">
-  <img src="readme-images/final8.jpg" width="375px" alt="final8">
-  <img src="readme-images/final9.jpg" width="375px" alt="final9">
-  <img src="readme-images/final10.jpg" width="375px" alt="final10">
+  <img src="../readme-images/final.jpg" width="375px" alt="final">
+  <img src="../readme-images/final2.jpg" width="375px" alt="final2">
+  <img src="../readme-images/final3.jpg" width="375px" alt="final3">
+  <img src="../readme-images/final4.jpg" width="375px" alt="final4">
+  <img src="../readme-images/final5.jpg" width="375px" alt="final5">
+  <img src="../readme-images/final6.jpg" width="375px" alt="final6">
+  <img src="../readme-images/final7.jpg" width="375px" alt="final7">
+  <img src="../readme-images/final8.jpg" width="375px" alt="final8">
+  <img src="../readme-images/final9.jpg" width="375px" alt="final9">
+  <img src="../readme-images/final10.jpg" width="375px" alt="final10">
 
 
   ### Dit ging goed/Heb ik geleerd: 
